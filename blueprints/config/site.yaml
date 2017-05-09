@@ -1,0 +1,43 @@
+@extends:
+  '@parent'
+
+form:
+  fields:
+    ceevee:
+      type: section
+      title: Ceevee theme's properties
+      underline: true
+      fields:
+        header.title:
+          type: text
+          label: Title
+        header.description:
+          type: markdown
+          label: Description
+        copyright:
+          type: list
+          label: Copyright lines
+          style: vertical
+          btnLabel: Add copyright line
+          help: You can use html code in here (not markdown though)
+          fields:
+            .line:
+              type: textarea
+              label: Line text
+        social:
+          type: list
+          label: Social network links
+          style: vertical
+          btnLabel: Add link to social network
+          fields:
+            .url:
+              type: text
+              label: URL
+            .icon:
+              type: text
+              label: Icon
+              help: FontAwesome icon name, without prefix
+
+
+
+
